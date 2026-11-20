@@ -1,10 +1,26 @@
 package com.gcc.invgas.dto;
 
 import java.util.List;
+import lombok.Data;
 import tools.jackson.databind.node.ObjectNode;
 
-public record CatalogosReporte(ObjectNode catalogos, List<Clase> clases, List<Tarea> tareas) {
-    public record Clase(String id, String nombre) {}
+@Data
+public class CatalogosReporte {
+    private ObjectNode catalogos;
+    private List<Clase> clases;
+    private List<Tarea> tareas;
 
-    public record Tarea(String id, String idClase, String titulo, String fecha) {}
+    @Data
+    public static class Clase {
+        private String id;
+        private String nombre;
+    }
+
+    @Data
+    public static class Tarea {
+        private String id;
+        private String idClase;
+        private String titulo;
+        private String fecha;
+    }
 }

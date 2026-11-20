@@ -1,6 +1,10 @@
 package com.gcc.invgas.dto;
 
 import java.util.List;
+import lombok.Data;
 import tools.jackson.databind.node.ObjectNode;
 
-public record ProduccionReporte(List<ObjectNode> registros) {}
+@Data
+public class ProduccionReporte {
+    private List<ObjectNode> registros;
+}
