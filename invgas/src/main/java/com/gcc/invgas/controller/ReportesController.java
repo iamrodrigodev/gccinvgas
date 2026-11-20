@@ -1,7 +1,9 @@
 package com.gcc.invgas.controller;
 
+import com.gcc.invgas.dto.CatalogosReporte;
+import com.gcc.invgas.dto.EntregasReporte;
+import com.gcc.invgas.dto.ProduccionReporte;
 import com.gcc.invgas.service.ReportesService;
-import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,17 +20,17 @@ public class ReportesController {
     }
 
     @GetMapping("/catalogos")
-    public Resource catalogos() {
+    public CatalogosReporte catalogos() {
         return reportesService.obtenerCatalogos();
     }
 
     @GetMapping("/entregas")
-    public Resource entregas() {
+    public EntregasReporte entregas() {
         return reportesService.obtenerEntregas();
     }
 
     @GetMapping("/produccion")
-    public Resource produccion() {
+    public ProduccionReporte produccion() {
         return reportesService.obtenerProduccion();
     }
 }
