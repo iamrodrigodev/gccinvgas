@@ -1,0 +1,22 @@
+{
+  "name": "gccinvgas",
+  "image": "mcr.microsoft.com/devcontainers/java:25-bookworm",
+  "forwardPorts": [8080],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "java.import.gradle.java.home": "/opt/java/openjdk",
+        "workbench.iconTheme": "material-icon-theme"
+      },
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot",
+        "vscjava.vscode-spring-initializr",
+        "humao.rest-client",
+        "usernamehw.errorlens",
+        "PKief.material-icon-theme"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
