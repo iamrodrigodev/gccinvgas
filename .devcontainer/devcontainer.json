@@ -1,12 +1,14 @@
+
 {
-  "name": "gccinvgas",
+  "name": "Java 25 + Spring Boot",
   "image": "mcr.microsoft.com/devcontainers/java:25-bookworm",
   "forwardPorts": [8080],
   "customizations": {
     "vscode": {
       "settings": {
         "java.import.gradle.java.home": "/opt/java/openjdk",
-        "workbench.iconTheme": "material-icon-theme"
+        "workbench.iconTheme": "material-icon-theme",
+        "workbench.colorTheme": "GitHub Dark Default"
       },
       "extensions": [
         "vscjava.vscode-java-pack",
@@ -14,9 +16,11 @@
         "vscjava.vscode-spring-initializr",
         "humao.rest-client",
         "usernamehw.errorlens",
-        "PKief.material-icon-theme"
+        "PKief.material-icon-theme",
+        "GitHub.github-vscode-theme"
       ]
     }
   },
   "remoteUser": "vscode"
 }
+
