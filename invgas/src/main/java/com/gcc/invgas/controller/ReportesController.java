@@ -5,11 +5,17 @@ import com.gcc.invgas.dto.EntregasReporte;
 import com.gcc.invgas.dto.ProduccionReporte;
 import com.gcc.invgas.service.ReportesService;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@CrossOrigin(originPatterns = {
+    "https://script.google.com",
+    "https://script.googleusercontent.com",
+    "https://*-script.googleusercontent.com"
+})
 @RequestMapping(path = "/api/reportes", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ReportesController {
 
